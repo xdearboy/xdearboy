@@ -4,4 +4,9 @@
         <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/942853223469973504?bg=1f1f1f&borderRadius=5px">
   </a>
   
-
+Hello✋, my name is Alex.
+I'm coder and designer
+I'm work at Adobe XD, Adobe Photoshope 2022, Figma, Visual Studio Code, Visual Studio, Atom.
+I'm write on Python, html, js, c#.
+Have computer and laptop💻
+Work at: https://t.me/VROFFTEAM and https://teletype.in/fzltype.
