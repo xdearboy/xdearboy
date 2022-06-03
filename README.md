@@ -15,3 +15,5 @@ I'm write on Python, html, js, c#.
 Have computer and laptop💻
 
 Work at: https://t.me/VROFFTEAM and https://teletype.in/fzltype.
+
+I come here often --- https://discord.gg/fzlgroup2
