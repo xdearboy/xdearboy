@@ -20,9 +20,11 @@ I come here often --- https://discord.gg/fzlgroup2
 
 <!--START_SECTION:waka-->
 
-<!--END_SECTION:waka-->
+```text
+Python   2 hrs 25 mins   █████████████████████████   99.44 %
+Text     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.37 %
+JSON     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.17 %
+Other    0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 %
+```
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Love+Discord)](https://git.io/typing-svg)
-
-<!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
