@@ -18,6 +18,10 @@ Work at: https://t.me/VROFFTEAM and https://teletype.in/@articlesfzltype.
 
 I come here often --- https://discord.gg/fzlgroup2
 
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Love+Discord)](https://git.io/typing-svg)
 
 <!--START_SECTION:waka-->
