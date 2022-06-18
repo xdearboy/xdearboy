@@ -16,7 +16,7 @@ Have computer and laptop💻
 
 Work at: https://t.me/VROFFTEAM and https://teletype.in/@articlesfzltype.
 
-I come here often --- https://discord.gg/fzlgroup2
+I come here often --- https://discord.gg/fzlgroup
 
 # Recent programming languages I have used
 
