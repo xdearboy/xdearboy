@@ -1,5 +1,4 @@
 <img src="header.png" alt="я иксдирбой">
-<img src="code.png" alt="я иксдирбой">
 
 <a href="https://discord.com/users/942853223469973504" target="_blank">
         <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/942853223469973504?bg=1f1f1f&borderRadius=5px">
@@ -20,6 +19,8 @@ Work at: https://t.me/VROFFTEAM and https://teletype.in/@articlesfzltype.
 I come here often --- https://discord.gg/fzlgroup
 
 # Recent programming languages I have used
+
+<img src="code.png" alt="drawing" width="100"/>
 
 <!--START_SECTION:waka-->
 
