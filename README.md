@@ -25,9 +25,7 @@ I come here often --- https://discord.gg/fzlgroup
 <!--START_SECTION:waka-->
 
 ```text
-Python   1 min           ███████████████████████▒░   93.27 %
-Text     0 secs          █▒░░░░░░░░░░░░░░░░░░░░░░░   05.17 %
-JSON     0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.56 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
