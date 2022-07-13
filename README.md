@@ -14,9 +14,8 @@ I'm write on Python, html, js, c#.
 
 Have computer and laptop💻
 
-Work at: https://t.me/VROFFTEAM and https://teletype.in/@articlesfzltype.
+Work at: https://t.me/VROFFTEAM and https://teletype.in/@vroffarticles.
 
-I come here often --- https://discord.gg/fzlgroup
 
 # Recent programming languages I have used
 
