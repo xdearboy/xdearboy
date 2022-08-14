@@ -24,10 +24,9 @@ Work at: https://t.me/VROFFTEAM and https://teletype.in/@vroffarticles.
 <!--START_SECTION:waka-->
 
 ```text
-Python   13 mins         ██████████████▓░░░░░░░░░░   58.43 %
-CSS      5 mins          █████▒░░░░░░░░░░░░░░░░░░░   21.62 %
-XML      3 mins          ████░░░░░░░░░░░░░░░░░░░░░   15.97 %
-Other    0 secs          █░░░░░░░░░░░░░░░░░░░░░░░░   03.98 %
+Python   15 mins         ███████████████████░░░░░░   76.19 %
+XML      3 mins          ████▓░░░░░░░░░░░░░░░░░░░░   18.99 %
+Other    0 secs          █▒░░░░░░░░░░░░░░░░░░░░░░░   04.74 %
 ```
 
 <!--END_SECTION:waka-->
