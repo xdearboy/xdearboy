@@ -6,6 +6,8 @@
   
 Hello✋, my name is Arseny.
 
+My nickname = xdearboy aka arsd3v
+
 I'm coder and designer
 
 I'm work at Adobe XD, Adobe Photoshope 2022, Figma, Visual Studio Code, Visual Studio, Atom.
