@@ -4,7 +4,7 @@
         <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/900028801793273987?bg=1f1f1f&borderRadius=5px">
   </a>
   
-Hello✋, my name is Arseny.
+Hello✋, my name is Alexey.
 
 My nickname = xdearboy aka arsd3v
 
@@ -16,7 +16,7 @@ I'm write on Python, html, js, c#.
 
 Have computer and laptop💻
 
-Work at: https://t.me/VROFFTEAM, #ВОЙНАПРОТИВ*МСК and https://teletype.in/@vroffarticles.
+Work at: https://t.me/VROFFTEAM
 
 
 # Recent programming languages I have used
