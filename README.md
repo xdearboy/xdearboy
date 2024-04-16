@@ -6,7 +6,7 @@
   
 Hello✋, my name is Alexey.
 
-My nickname = xdearboy aka arsd3v
+My nickname = xdearboy
 
 I'm coder and designer
 
