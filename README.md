@@ -16,9 +16,6 @@ I'm write on Python, html, js, c#.
 
 Have computer and laptop💻
 
-Work at: https://t.me/VROFFTEAM
-
-
 # Recent programming languages I have used
 
 <img src="code.png" alt="drawing" width="100"/>
