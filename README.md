@@ -6,8 +6,6 @@
   
 Hello✋, my name is Alexey.
 
-My nickname = xdearboy
-
 I'm coder and designer
 
 I'm work at Adobe XD, Adobe Photoshope 2022, Figma, Visual Studio Code, Visual Studio, Atom.
