@@ -31,7 +31,4 @@ Figma = true
 [Recent programming languages I have used]
 
 <!--START_SECTION:waka-->
-
-
-
 <!--END_SECTION:waka-->
