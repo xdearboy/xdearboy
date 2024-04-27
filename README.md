@@ -1,4 +1,3 @@
-<img src="header.png" alt="xdearboy">
 ```toml
 [owner]
 name = "xdearboy"
@@ -28,13 +27,3 @@ Figma = true
 [recent_programming_languages]
 tracked = false
 ```
-
-[Recent programming languages I have used]
-
-<!--START_SECTION:waka-->
-
-
-
-<!--END_SECTION:waka-->
-
-
