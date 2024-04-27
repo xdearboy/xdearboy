@@ -1,27 +1,41 @@
-<img src="header.png" alt="я арсдев">
+<img src="header.png" alt="xdearboy">
+{
+  "hello": "Hello, my name is Alexey.",
+  "owner": {
+    "name": "xdearboy",
+    "city": "Moscow, Russia.",
+    "website": "https:"
+  },
+  "bio": {
+    "website": "https://fiuimwix.pages.dev/",
+    "categories": [
+      "work",
+      "development",
+      "bio"
 
-<a href="https://discord.com/users/942853223469973504" target="_blank">
-        <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/900028801793273987?bg=1f1f1f&borderRadius=5px">
-  </a>
-  
-Hello✋, my name is Alexey.
+    ],
+    "interests": [
+      "tools",
+      "discord",
+      "bots",
+      "coding",
+      "programming",
+      "design"
+    ]
+  },
+  "design apps": {
+    "Adobe Photoshope"
+    "Adobe Illustrator",
+    "Figma"
+  }
+}
 
-I'm coder and designer
-
-I'm work at Adobe XD, Adobe Photoshope 2022, Figma, Visual Studio Code, Visual Studio, Atom.
-
-I'm write on Python, html, js, c#.
-
-Have computer and laptop💻
-
-# Recent programming languages I have used
-
-<img src="code.png" alt="drawing" width="100"/>
+[Recent programming languages I have used]
 
 <!--START_SECTION:waka-->
 
-```text
-No activity tracked
-```
+
 
 <!--END_SECTION:waka-->
+
+
