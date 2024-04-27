@@ -1,10 +1,11 @@
+<img src="header.png" alt="xdearboy">
+```toml
 {
-  "banner": "https://raw.githubusercontent.com/vroffteam/vroffteam/main/vroffbunny.png",
-  "hello": "Hello✋, my name is Alexey.",
+  "hello": "Hello, my name is Alexey.",
   "owner": {
     "name": "xdearboy",
     "city": "Moscow, Russia.",
-    "website": "https://xdearboy.github.io/"
+    "website": "https:"
   },
   "bio": {
     "website": "https://fiuimwix.pages.dev/",
@@ -12,6 +13,7 @@
       "work",
       "development",
       "bio"
+
     ],
     "interests": [
       "tools",
@@ -22,12 +24,20 @@
       "design"
     ]
   },
-  "design apps": [
-    "Adobe Photoshope",
+  "design apps": {
+    "Adobe Photoshope"
     "Adobe Illustrator",
     "Figma"
-  ],
-  "recent_programming_languages": {
-    "tracked": false
   }
 }
+```
+
+[Recent programming languages I have used]
+
+<!--START_SECTION:waka-->
+
+
+
+<!--END_SECTION:waka-->
+
+
