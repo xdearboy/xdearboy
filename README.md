@@ -24,9 +24,6 @@ interests = [
 Adobe_Photoshope = true
 Adobe_Illustrator = true
 Figma = true
-
-[recent_programming_languages]
-tracked = false
 ```
 
 <img src="header.png" alt="xdearboy">
