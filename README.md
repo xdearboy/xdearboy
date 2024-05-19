@@ -26,7 +26,7 @@ Adobe_Illustrator = true
 Figma = true
 ```
 
-<img src="header.png" alt="xdearboy">
+<p align="center"><img src="https://raw.githubusercontent.com/xdearboy/xdearboy/output/github-contribution-grid-snake.svg"></p>
 
 [Recent programming languages I have used]
 
