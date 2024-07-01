@@ -40,8 +40,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Python   26 mins         ███████████████████████▓░   94.65 %
-Binary   1 min           █▒░░░░░░░░░░░░░░░░░░░░░░░   05.35 %
+Python   26 mins         █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
