@@ -40,9 +40,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Lua     10 mins         ████████████████████████▓   98.19 %
-Other   0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.11 %
-XML     0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.69 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
