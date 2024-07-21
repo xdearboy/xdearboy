@@ -40,7 +40,9 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Python   13 mins         █████████████████████████   100.00 %
+Python      14 mins         █████████████████▓░░░░░░░   70.29 %
+Other       5 mins          ███████▒░░░░░░░░░░░░░░░░░   28.98 %
+Batchfile   0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.73 %
 ```
 
 <!--END_SECTION:waka-->
