@@ -25,8 +25,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" alt="vscode logo"  />
 </div>
 
-```
-```
+<pre> <pre>
 
 <div align="center">
   <a href="fiuimwix" target="_blank">
