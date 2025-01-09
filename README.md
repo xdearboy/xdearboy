@@ -1,7 +1,7 @@
 <p align="center"><img src="https://reimaginedreadme-lilac.vercel.app/api/embed/xdearboy?panels=userstatistics,toplanguages,commitgraph,toprepositories"/></p>
 <p align="center"><img src="https://raw.githubusercontent.com/xdearboy/xdearboy/output/github-contribution-grid-snake.svg"></p>
 
-<img align="right" height="150" src="https://small.fileditchstuff.me/s11/vKUhEAfIzEZxgeFdKRl.jpg"  />
+
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="30" alt="figma logo"  />
