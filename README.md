@@ -44,11 +44,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Python        4 hrs 5 mins    ██████████░░░░░░░░░░░░░░░   40.00 %
-TypeScript    3 hrs 6 mins    ███████▓░░░░░░░░░░░░░░░░░   30.46 %
-Markdown      1 hr 18 mins    ███▒░░░░░░░░░░░░░░░░░░░░░   12.78 %
-Image (svg)   38 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.21 %
-YAML          25 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.11 %
+Python        4 hrs 13 mins   ██████████▓░░░░░░░░░░░░░░   42.03 %
+TypeScript    2 hrs 16 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.61 %
+Markdown      1 hr 18 mins    ███▒░░░░░░░░░░░░░░░░░░░░░   13.01 %
+JavaScript    50 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.30 %
+Image (svg)   38 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.32 %
 ```
 
 <!--END_SECTION:waka-->
