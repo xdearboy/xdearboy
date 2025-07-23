@@ -41,16 +41,6 @@
 
 <br />
 
-<!--START_SECTION:waka-->
-
-```txt
-Python       1 hr 1 min      █████▒░░░░░░░░░░░░░░░░░░░   21.97 %
-Rust         58 mins         █████▒░░░░░░░░░░░░░░░░░░░   20.98 %
-Bash         56 mins         █████░░░░░░░░░░░░░░░░░░░░   20.08 %
-HTML         51 mins         ████▓░░░░░░░░░░░░░░░░░░░░   18.46 %
-EJS          25 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.01 %
-```
-
-<!--END_SECTION:waka-->
+wakatime - https://wakatime.com/@xdearboy
 
 ```My dotfiles:``` https://github.com/xdearboy/dotfiles
