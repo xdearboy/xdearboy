@@ -51,4 +51,4 @@ Mostly Rust, Python and TypeScript. Website & blog → **[d3vo.ru](https://d3vo.
 
 ### Links
 
-[telegram](https://t.me/contactfiuimwix_bot) · [email](mailto:arsd3v@garticrashers.ru) · [wakatime](https://wakatime.com/@xdearboy) · [codewars](https://www.codewars.com/users/xdearboy) · [dotfiles](https://github.com/xdearboy/dotfiles)
+[telegram](https://t.me/contactfiuimwix_bot) · [wakatime](https://wakatime.com/@xdearboy) · [codewars](https://www.codewars.com/users/xdearboy) · [dotfiles](https://github.com/xdearboy/dotfiles)
