@@ -4,7 +4,7 @@
 ![followers](https://img.shields.io/github/followers/xdearboy?label=followers&color=2f2f2f&style=flat)
 ![stars](https://img.shields.io/github/stars/xdearboy?label=stars&color=2f2f2f&style=flat&affiliations=OWNER)
 
-**DevOps / SRE engineer** · Tver, Russia · coding daily since 2022
+**DevOps / SRE engineer** · Tver, Russia · coding daily since 2018
 
 I like terminals, small fast tools, and infrastructure that fixes itself.
 Mostly Rust, Python and TypeScript. Website & blog → **[d3vo.ru](https://d3vo.ru)**
