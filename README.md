@@ -23,7 +23,7 @@ Mostly Rust, Python and TypeScript. Website & blog → **[d3vo.ru](https://d3vo.
 
 ### Projects
 
-- **[mfetch](https://github.com/xdearboy/mfetch)** — memory-focused system info tool in Rust for Linux
+- **[mfetch](https://github.com/xdearboy/mfetch)** — memory-focused system info tool in Rust for Linux (currently not maintained by me)
 - **[speedra](https://github.com/xdearboy/speedra)** — terminal-first network speed-testing CLI
 - **[dec64](https://github.com/xdearboy/dec64)** — Python library to recursively decode Base64 strings
 - **[docker-squid-proxy](https://github.com/xdearboy/docker-squid-proxy)** — authenticated HTTP proxy on Squid via Docker
