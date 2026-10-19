@@ -17,9 +17,9 @@ mkdirSync(out, { recursive: true });
 const profile = await fetchProfile(login);
 const buttons = [
   { id: "web", text: "d3vo.ru", iconName: "globe", primary: true, href: "https://d3vo.ru" },
-  { id: "tg", text: "Telegram", iconName: "telegram", href: "https://t.me/contactfiuimwix_bot" },
-  { id: "waka", text: "WakaTime", iconName: "wakatime", href: "https://wakatime.com/@xdearboy" },
-  { id: "cw", text: "Codewars", iconName: "codewars", href: "https://www.codewars.com/users/xdearboy" },
+  { id: "tg", text: "telegram", iconName: "telegram", href: "https://t.me/contactfiuimwix_bot" },
+  { id: "waka", text: "wakatime", iconName: "wakatime", href: "https://wakatime.com/@xdearboy" },
+  { id: "cw", text: "codewars", iconName: "codewars", href: "https://www.codewars.com/users/xdearboy" },
 ];
 
 const files = {

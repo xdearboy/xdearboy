@@ -10,15 +10,15 @@ export const divider = () =>
 
 export const button = ({ text, iconName, primary }) => {
   const size = 14;
-  const w = Math.round(textWidth(text, size) + 60);
-  const h = 40;
+  const w = Math.round(textWidth(text, size) + 38);
+  const h = 26;
   const ink = primary ? mocha.mauve : mocha.subtext;
   return frame({
     width: w,
     height: h,
     label: text,
     weights: [700],
-    body: `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="8" fill="${primary ? mocha.mauve + "1a" : ui_.panel}" stroke="${primary ? mocha.mauve : ui_.border}"/>${icon(iconName, 18, 12, 16, ink)}<text x="42" y="25" font-size="${size}" font-weight="700" style="fill:${ink}">${esc(text)}</text>`,
+    body: `${icon(iconName, 1, 5, 16, ink)}<text x="25" y="17.5" font-size="${size}" font-weight="700" style="fill:${ink}">${esc(text)}</text>`,
   });
 };
 

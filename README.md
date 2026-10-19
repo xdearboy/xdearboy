@@ -2,7 +2,7 @@
 
 <img src="assets/hero.svg" width="100%" alt="Hi, I'm xdearboy">
 
-<a href="https://d3vo.ru"><img src="assets/button-web.svg" width="auto" alt="d3vo.ru"></a>&nbsp;&nbsp;<a href="https://t.me/contactfiuimwix_bot"><img src="assets/button-tg.svg" width="auto" alt="Telegram"></a>&nbsp;&nbsp;<a href="https://wakatime.com/@xdearboy"><img src="assets/button-waka.svg" width="auto" alt="WakaTime"></a>&nbsp;&nbsp;<a href="https://www.codewars.com/users/xdearboy"><img src="assets/button-cw.svg" width="auto" alt="Codewars"></a>
+<a href="https://d3vo.ru"><img src="assets/button-web.svg" width="auto" alt="d3vo.ru"></a>&nbsp;&nbsp;<a href="https://t.me/contactfiuimwix_bot"><img src="assets/button-tg.svg" width="auto" alt="telegram"></a>&nbsp;&nbsp;<a href="https://wakatime.com/@xdearboy"><img src="assets/button-waka.svg" width="auto" alt="wakatime"></a>&nbsp;&nbsp;<a href="https://www.codewars.com/users/xdearboy"><img src="assets/button-cw.svg" width="auto" alt="codewars"></a>
 
 <img src="assets/about.svg" width="100%" alt="About me">
 
