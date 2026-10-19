@@ -4,7 +4,7 @@ import { hero } from "./cards/hero.mjs";
 import { about } from "./cards/about.mjs";
 import { experience } from "./cards/experience.mjs";
 import { stack } from "./cards/stack.mjs";
-import { project } from "./cards/project.mjs";
+import { work } from "./cards/work.mjs";
 import { stats } from "./cards/stats.mjs";
 import { streak } from "./cards/streak.mjs";
 import { button, divider, footer } from "./cards/extras.mjs";
@@ -15,8 +15,6 @@ const out = new URL("assets/", root);
 mkdirSync(out, { recursive: true });
 
 const profile = await fetchProfile(login);
-const repos = profile.projects.slice(0, 6);
-
 const buttons = [
   { id: "web", text: "d3vo.ru", iconName: "globe", primary: true, href: "https://d3vo.ru" },
   { id: "tg", text: "Telegram", iconName: "telegram", href: "https://t.me/contactfiuimwix_bot" },
@@ -33,7 +31,7 @@ const files = {
   streak: streak(profile),
   divider: divider(),
   footer: footer(new Date().toISOString().slice(0, 16).replace("T", " ") + " utc"),
-  ...Object.fromEntries(repos.map((r, i) => [`project-${i + 1}`, project(r)])),
+  work: work(),
   ...Object.fromEntries(buttons.map((b) => [`button-${b.id}`, button(b)])),
 };
 
@@ -44,15 +42,6 @@ for (const [name, svg] of Object.entries(files)) {
 
 const img = (name, alt, width = "100%") => `<img src="assets/${name}.svg" width="${width}" alt="${alt}">`;
 const link = (href, inner) => `<a href="${href}">${inner}</a>`;
-
-const projectRows = [];
-for (let i = 0; i < repos.length; i += 2)
-  projectRows.push(
-    repos
-      .slice(i, i + 2)
-      .map((r, k) => link(r.url, img(`project-${i + k + 1}`, r.name, "49%")))
-      .join("&nbsp;"),
-  );
 
 const readme = `<div align="center">
 
@@ -66,7 +55,7 @@ ${img("experience", "Experience")}
 
 ${img("stack", "Tech stack")}
 
-${projectRows.join("\n\n")}
+${link("https://github.com/xdearboy?tab=repositories", img("work", "Selected work"))}
 
 ${img("stats", "GitHub activity")}
 

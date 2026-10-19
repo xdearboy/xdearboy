@@ -1,10 +1,10 @@
 import { W, esc, frame, mocha, panel, sectionTitle, tag, ui_ } from "../theme.mjs";
 
 const groups = [
-  ["languages", ["rust", "go", "python", "typescript", "bash"]],
-  ["infra", ["linux", "docker", "kubernetes", "k3s", "helm", "haproxy", "nginx"]],
-  ["observability", ["prometheus", "grafana", "clickhouse", "postgresql"]],
-  ["ci/cd & web", ["github actions", "react", "vite", "tailwind"]],
+  ["code", ["rust", "go", "python", "typescript", "bash"]],
+  ["platform & network", ["linux", "docker", "kubernetes", "k3s", "helm", "haproxy", "nginx"]],
+  ["data & observability", ["prometheus", "grafana", "clickhouse", "postgresql"]],
+  ["delivery", ["github actions", "react", "vite", "tailwind"]],
 ];
 
 const KEY_W = 150;

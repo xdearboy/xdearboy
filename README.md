@@ -10,11 +10,7 @@
 
 <img src="assets/stack.svg" width="100%" alt="Tech stack">
 
-<a href="https://github.com/xdearboy/tachyon"><img src="assets/project-1.svg" width="49%" alt="tachyon"></a>&nbsp;<a href="https://github.com/ORG-FE/mfetch"><img src="assets/project-2.svg" width="49%" alt="mfetch"></a>
-
-<a href="https://github.com/xdearboy/dec64"><img src="assets/project-3.svg" width="49%" alt="dec64"></a>&nbsp;<a href="https://github.com/xdearboy/pastecreator"><img src="assets/project-4.svg" width="49%" alt="pastecreator"></a>
-
-<a href="https://github.com/xdearboy/dotfiles"><img src="assets/project-5.svg" width="49%" alt="dotfiles"></a>&nbsp;<a href="https://github.com/xdearboy/neogate-sdk"><img src="assets/project-6.svg" width="49%" alt="neogate-sdk"></a>
+<a href="https://github.com/xdearboy?tab=repositories"><img src="assets/work.svg" width="100%" alt="Selected work"></a>
 
 <img src="assets/stats.svg" width="100%" alt="GitHub activity">
 

@@ -3,7 +3,7 @@ import { CW, W, d, dots, frame, icon, mocha, panel, ui_ } from "../theme.mjs";
 
 const H = 236;
 const avatar = readFileSync(new URL("../../assets/avatar.jpg", import.meta.url)).toString("base64");
-const SUB = "devops / sre engineer · infra that fixes itself";
+const SUB = "devops / sre engineer · systems, networks and web protection";
 
 export const hero = () => {
   const size = 15;
@@ -16,8 +16,8 @@ export const hero = () => {
   const widths = Array.from({ length: n + 1 }, (_, i) => (i * cw).toFixed(1)).join(";");
 
   const meta = [
+    ["server", "AS214745 · independent network"],
     ["map-pin", "tver, russia · utc+3"],
-    ["terminal", "coding since 2018"],
     ["code-xml", "rust · go · python · typescript"],
   ];
   let mx = 36;

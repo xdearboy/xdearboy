@@ -1,8 +1,8 @@
 import { W, d, frame, mocha, panel, sectionTitle, ui_, wrap, esc } from "../theme.mjs";
 
 const paragraphs = [
-  "hey! i'm xdearboy, a devops / sre engineer. i run edge infrastructure, kubernetes clusters and anti-ddos tooling, and i like small fast tools written in rust, go and python.",
-  "i build neogate, a domain protection service, and tinker with networking in my free time. timezone: utc+3, tver, russia.",
+  "hey! i'm xdearboy, a devops / sre engineer working across systems, networks and web protection. i build services around reliable edge infrastructure and maintain my own autonomous system, AS214745.",
+  "i work mostly with kubernetes and linux, and write small practical tools in rust, go, python and typescript. based in tver, russia · utc+3.",
 ];
 const FS = 15;
 const LH = 24;
