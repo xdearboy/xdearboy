@@ -51,6 +51,6 @@ export const work = () => {
   return frame({
     height: H,
     label: "open source",
-    body: panel(W, H) + sectionTitle("open source") + `<line x1="${PAD}" x2="${W - PAD}" y1="72" y2="72" stroke="${ui_.border}"/>` + cols,
+    body: panel(W, H) + sectionTitle("open source") + `<line x1="${PAD}" x2="${W - PAD}" y1="72" y2="72" stroke="${ui_.border}"/>` + cols + `<text x="${W - PAD}" y="${H - 20}" font-size="13" text-anchor="end" style="fill:${mocha.mauve}">all repositories →</text>`,
   });
 };

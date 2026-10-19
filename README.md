@@ -10,7 +10,7 @@
 
 <img src="assets/stack.svg" width="100%" alt="Tech stack">
 
-<img src="assets/work.svg" width="100%" alt="Open source">
+<a href="https://github.com/xdearboy?tab=repositories"><img src="assets/work.svg" width="100%" alt="Open source — view all repositories"></a>
 
 <img src="assets/stats.svg" width="100%" alt="GitHub activity">
 

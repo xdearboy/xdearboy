@@ -55,7 +55,7 @@ ${img("experience", "Experience")}
 
 ${img("stack", "Tech stack")}
 
-${img("work", "Open source")}
+${link("https://github.com/xdearboy?tab=repositories", img("work", "Open source — view all repositories"))}
 
 ${img("stats", "GitHub activity")}
 
