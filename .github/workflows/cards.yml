@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: portfolio-runners
+    runs-on: profile-runners
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
