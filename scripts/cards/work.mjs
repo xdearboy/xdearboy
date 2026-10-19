@@ -2,27 +2,27 @@ import { W, d, esc, frame, mocha, panel, sectionTitle, ui_, wrap } from "../them
 
 const groups = [
   {
-    label: "NETWORK & PROTECTION",
+    label: "SYSTEMS & NETWORK",
     accent: mocha.mauve,
-    items: [
-      ["neogate", "web protection and edge infrastructure"],
-      ["AS214745", "independent ASN for network operations"],
-    ],
-  },
-  {
-    label: "SYSTEMS & INFRA",
-    accent: mocha.blue,
     items: [
       ["tachyon", "HTTP/HTTPS engine in C with Linux kTLS"],
       ["mfetch", "system information utility written in Rust"],
     ],
   },
   {
-    label: "TOOLS & SOFTWARE",
-    accent: mocha.green,
+    label: "DEVELOPER TOOLS",
+    accent: mocha.blue,
     items: [
       ["neogate-sdk", "TypeScript SDK, MCP server and playbooks"],
-      ["smaller tools", "dec64, pastecreator and dotfiles"],
+      ["dec64", "Python library for recursive Base64 decoding"],
+    ],
+  },
+  {
+    label: "UTILITIES & CONFIG",
+    accent: mocha.green,
+    items: [
+      ["pastecreator", "Pastebin publisher with CLI and GUI"],
+      ["dotfiles", "my macOS terminal and development environment"],
     ],
   },
 ];
@@ -50,7 +50,7 @@ export const work = () => {
 
   return frame({
     height: H,
-    label: "selected work",
-    body: panel(W, H) + sectionTitle("selected work") + `<line x1="${PAD}" x2="${W - PAD}" y1="72" y2="72" stroke="${ui_.border}"/>` + cols + `<text x="${W - PAD}" y="${H - 20}" font-size="13" text-anchor="end" style="fill:${mocha.mauve}">all repositories →</text>`,
+    label: "open source",
+    body: panel(W, H) + sectionTitle("open source") + `<line x1="${PAD}" x2="${W - PAD}" y1="72" y2="72" stroke="${ui_.border}"/>` + cols,
   });
 };
