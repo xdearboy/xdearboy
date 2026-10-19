@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cards
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: profile-runners
