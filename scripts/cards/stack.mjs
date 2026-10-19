@@ -4,10 +4,11 @@ const groups = [
   ["code", ["rust", "go", "python", "typescript", "bash"]],
   ["platform & network", ["linux", "docker", "kubernetes", "k3s", "helm", "haproxy", "nginx"]],
   ["data & observability", ["prometheus", "grafana", "clickhouse", "postgresql"]],
-  ["delivery", ["github actions", "react", "vite", "tailwind"]],
+  ["web", ["react", "vite", "tailwind"]],
+  ["delivery", ["github actions"]],
 ];
 
-const KEY_W = 150;
+const KEY_W = 188;
 const ROW = 40;
 
 export const stack = () => {
