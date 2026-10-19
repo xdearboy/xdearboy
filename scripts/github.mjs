@@ -63,7 +63,9 @@ export const fetchProfile = async (login) => {
     w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, level: LEVELS[d.contributionLevel] })),
   );
 
-  const pinned = u.pinnedItems.nodes.length ? u.pinnedItems.nodes : u.recent.nodes;
+  const projects = [...u.pinnedItems.nodes, ...u.recent.nodes]
+    .filter((repo, index, all) => all.findIndex((other) => other.name === repo.name) === index)
+    .slice(0, 6);
 
   return {
     login,
@@ -77,7 +79,7 @@ export const fetchProfile = async (login) => {
     activeDays: days.filter((d) => d.count > 0).length,
     weeks,
     languages,
-    projects: pinned,
+    projects,
     ...streaks(days),
   };
 };

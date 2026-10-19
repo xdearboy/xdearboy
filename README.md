@@ -14,7 +14,7 @@
 
 <a href="https://github.com/xdearboy/dec64"><img src="assets/project-3.svg" width="49%" alt="dec64"></a>&nbsp;<a href="https://github.com/xdearboy/pastecreator"><img src="assets/project-4.svg" width="49%" alt="pastecreator"></a>
 
-<a href="https://github.com/xdearboy/dotfiles"><img src="assets/project-5.svg" width="49%" alt="dotfiles"></a>
+<a href="https://github.com/xdearboy/dotfiles"><img src="assets/project-5.svg" width="49%" alt="dotfiles"></a>&nbsp;<a href="https://github.com/xdearboy/neogate-sdk"><img src="assets/project-6.svg" width="49%" alt="neogate-sdk"></a>
 
 <img src="assets/stats.svg" width="100%" alt="GitHub activity">
 
