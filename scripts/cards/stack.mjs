@@ -1,35 +1,40 @@
-import { c, CW, delay, esc, frame, panel } from "../theme.mjs";
+import { W, esc, frame, mocha, panel, sectionTitle, tag, ui_ } from "../theme.mjs";
 
 const groups = [
-  ["lang", c.mauve, ["Rust", "Python", "TypeScript", "Bash", "Go"]],
-  ["infra", c.blue, ["Linux", "Docker", "Kubernetes", "k3s", "HAProxy", "Nginx", "Helm"]],
-  ["ops", c.peach, ["GitHub Actions", "Prometheus", "Grafana", "ClickHouse", "PostgreSQL"]],
-  ["web", c.green, ["React", "Vite", "Tailwind", "Elysia"]],
+  ["languages", ["rust", "go", "python", "typescript", "bash"]],
+  ["infra", ["linux", "docker", "kubernetes", "k3s", "helm", "haproxy", "nginx"]],
+  ["observability", ["prometheus", "grafana", "clickhouse", "postgresql"]],
+  ["ci/cd & web", ["github actions", "react", "vite", "tailwind"]],
 ];
 
-const FS = 12;
-const PAD = 24;
+const KEY_W = 150;
 const ROW = 40;
-const H = 64 + groups.length * ROW + 4;
 
 export const stack = () => {
   let n = 0;
+  let y = 84;
   const rows = groups
-    .map(([label, color, items], gi) => {
-      const y = 62 + gi * ROW;
-      let x = PAD + 64;
-      const chips = items
-        .map((item) => {
-          const w = item.length * FS * CW + 24;
-          const out = `<g class="rise" ${delay(0.1 + n++ * 0.05)}><rect x="${x}" y="${y}" width="${w.toFixed(1)}" height="28" rx="8" fill="${c.mantle}" stroke="${c.surface0}"/><circle cx="${x + 11}" cy="${y + 14}" r="3" fill="${color}"/><text x="${x + 20}" y="${y + 18.5}" font-size="${FS}">${esc(item)}</text></g>`;
-          x += w + 8;
-          return out;
+    .map(([key, items]) => {
+      let x = 36 + KEY_W;
+      let cy = y;
+      const tags = items
+        .map((text) => {
+          let t = tag({ x, y: cy, text, delay: 0.1 + n * 0.04 });
+          if (x + t.w > W - 36) {
+            x = 36 + KEY_W;
+            cy += ROW;
+            t = tag({ x, y: cy, text, delay: 0.1 + n * 0.04 });
+          }
+          n++;
+          x += t.w + 8;
+          return t.svg;
         })
         .join("");
-      return `<text x="${PAD}" y="${y + 18.5}" font-size="12" style="fill:${c.overlay}">${label}</text>${chips}`;
+      const out = `<text x="36" y="${y + 19}" font-size="14" font-weight="700">${esc(key)}</text>${tags}`;
+      y = cy + ROW + 6;
+      return out;
     })
     .join("");
-
-  const body = panel(H) + `<text x="${PAD}" y="40" font-size="13" font-weight="700" style="fill:${c.overlay}"># stack</text>` + rows;
-  return frame({ height: H, label: "Tech stack", body });
+  const H = y + 10;
+  return frame({ height: H, label: "stack", body: panel(W, H) + sectionTitle("stack") + rows });
 };

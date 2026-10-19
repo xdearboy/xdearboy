@@ -1,71 +1,45 @@
-import { c, CW, W, delay, esc, frame, panel } from "../theme.mjs";
+import { readFileSync } from "node:fs";
+import { CW, W, d, dots, frame, icon, mocha, panel, ui_ } from "../theme.mjs";
 
-const H = 300;
-const LINE = 28;
-const TOP = 86;
-const SPEED = 0.045;
-
-const lines = [
-  { prompt: true, text: "whoami", size: 16 },
-  { text: "xdearboy", size: 38, weight: 700, fill: c.mauve, gap: 14 },
-  { prompt: true, text: "cat about.txt", size: 16 },
-  { text: "DevOps / SRE engineer  ·  Tver, RU  ·  coding since 2018", size: 15, fill: c.text },
-  { text: "terminals, small fast tools, infra that fixes itself", size: 15, fill: c.overlay },
-  { prompt: true, text: "open d3vo.ru", size: 16, last: true },
-];
+const H = 236;
+const avatar = readFileSync(new URL("../../assets/avatar.jpg", import.meta.url)).toString("base64");
+const SUB = "devops / sre engineer · infra that fixes itself";
 
 export const hero = () => {
-  let y = TOP;
-  let t = 0.5;
-  let body = "";
-  const x0 = 36;
+  const size = 15;
+  const cw = size * CW;
+  const tx = 176;
+  const ty = 118;
+  const n = SUB.length;
+  const start = 0.9;
+  const dur = n * 0.035;
+  const widths = Array.from({ length: n + 1 }, (_, i) => (i * cw).toFixed(1)).join(";");
 
-  for (const l of lines) {
-    const size = l.size;
-    const cw = size * CW;
-    const px = l.prompt ? x0 + cw * 2 : x0;
-    const n = l.text.length;
-    const dur = n * SPEED;
-    const id = `c${Math.round(y)}`;
-    const widths = Array.from({ length: n + 1 }, (_, i) => (i * cw).toFixed(2)).join(";");
-    const xs = Array.from({ length: n + 1 }, (_, i) => (px + i * cw).toFixed(2)).join(";");
-    const baseline = y + (l.gap ?? 0);
-
-    body += `<clipPath id="${id}"><rect x="${px}" y="${baseline - size - 4}" width="0" height="${size + 12}"><animate attributeName="width" values="${widths}" calcMode="discrete" begin="${t.toFixed(2)}s" dur="${dur.toFixed(2)}s" fill="freeze"/></rect></clipPath>`;
-    if (l.prompt) body += `<text x="${x0}" y="${baseline}" font-size="${size}" font-weight="700" style="fill:${c.green}" opacity="0"><set attributeName="opacity" to="1" begin="${t.toFixed(2)}s"/>$</text>`;
-    body += `<text x="${px}" y="${baseline}" font-size="${size}" font-weight="${l.weight ?? 400}" style="fill:${l.fill ?? c.text}" clip-path="url(#${id})">${esc(l.text)}</text>`;
-
-    const curH = size + 4;
-    body += `<rect y="${baseline - size + 1}" width="${Math.max(2, size * 0.5)}" height="${curH}" rx="1" fill="${c.mauve}" opacity="0"><animate attributeName="x" values="${xs}" calcMode="discrete" begin="${t.toFixed(2)}s" dur="${dur.toFixed(2)}s" fill="freeze"/><set attributeName="opacity" to="1" begin="${t.toFixed(2)}s"/>${
-      l.last
-        ? `<animate attributeName="opacity" values="1;0;1" dur="1.1s" begin="${(t + dur).toFixed(2)}s" repeatCount="indefinite" calcMode="discrete"/>`
-        : `<set attributeName="opacity" to="0" begin="${(t + dur + 0.05).toFixed(2)}s"/>`
-    }</rect>`;
-
-    t += dur + 0.35;
-    y += LINE + (l.gap ?? 0);
-  }
-
-  const dots = [c.red, c.yellow, c.green]
-    .map((f, i) => `<circle cx="${28 + i * 20}" cy="26" r="6" fill="${f}" opacity=".85"/>`)
+  const meta = [
+    ["map-pin", "tver, russia · utc+3"],
+    ["terminal", "coding since 2018"],
+    ["code-xml", "rust · go · python · typescript"],
+  ];
+  let mx = 36;
+  const metaSvg = meta
+    .map(([ic, t], i) => {
+      const out = `<g class="up" ${d(0.5 + i * 0.12)}>${icon(ic, mx, 192, 16, ui_.muted)}<text x="${mx + 24}" y="204" font-size="13" style="fill:${mocha.subtext}">${t}</text></g>`;
+      mx += 24 + t.length * 13 * CW + 28;
+      return out;
+    })
     .join("");
 
-  const dotGrid = Array.from({ length: 9 }, (_, r) =>
-    Array.from({ length: 14 }, (_, col) => {
-      const d = Math.hypot(col - 13, r - 8);
-      return `<circle cx="${W - 250 + col * 17}" cy="${H - 170 + r * 17}" r="1.6" fill="${c.mauve}" opacity="${Math.max(0.05, 0.55 - d * 0.05).toFixed(2)}"/>`;
-    }).join(""),
-  ).join("");
+  const defs = `<clipPath id="av"><rect x="36" y="36" width="120" height="120" rx="20"/></clipPath>
+<clipPath id="ty"><rect x="${tx}" y="${ty - 18}" width="0" height="26"><animate attributeName="width" values="${widths}" calcMode="discrete" begin="${start}s" dur="${dur.toFixed(2)}s" fill="freeze"/></rect></clipPath>`;
 
-  const defs = `<radialGradient id="glow" cx="85%" cy="90%" r="60%"><stop offset="0" stop-color="${c.mauve}" stop-opacity=".22"/><stop offset="1" stop-color="${c.mauve}" stop-opacity="0"/></radialGradient>
-<clipPath id="card"><rect width="${W}" height="${H}" rx="14"/></clipPath>`;
+  const body =
+    panel(W, H) +
+    dots({ x: W - 176, y: 30, cols: 10, rows: 8, gap: 16, from: "tr" }) +
+    `<g class="up"><image href="data:image/jpeg;base64,${avatar}" x="36" y="36" width="120" height="120" preserveAspectRatio="xMidYMid slice" clip-path="url(#av)"/><rect x="36.5" y="36.5" width="119" height="119" rx="19.5" fill="none" stroke="${ui_.border}"/></g>` +
+    `<g class="up" ${d(0.15)}><text x="${tx}" y="76" font-size="36" font-weight="700">xdearboy</text><text x="${tx + 8 * 36 * CW + 14}" y="76" font-size="20" style="fill:${ui_.muted}">// @xdearboy<tspan class="blink" style="fill:${mocha.mauve}">_</tspan></text></g>` +
+    `<text x="${tx}" y="${ty}" font-size="${size}" clip-path="url(#ty)" style="fill:${mocha.subtext}">${SUB}</text>` +
+    `<line x1="36" x2="${W - 36}" y1="172" y2="172" stroke="${ui_.border}"/>` +
+    metaSvg;
 
-  const inner = `<g clip-path="url(#card)"><rect width="${W}" height="${H}" fill="url(#glow)"/><rect width="${W}" height="44" fill="${c.mantle}"/><line x1="0" x2="${W}" y1="44" y2="44" stroke="${c.surface1}"/>${dots}<text x="${W / 2}" y="30" font-size="12" text-anchor="middle" style="fill:${c.overlay}">xdearboy@d3vo ~ zsh</text><g class="fade" ${delay(1.2)}>${dotGrid}</g></g>`;
-
-  return frame({
-    height: H,
-    label: "xdearboy — DevOps / SRE engineer",
-    defs,
-    body: panel(H) + inner + body,
-  });
+  return frame({ height: H, label: "xdearboy — devops / sre engineer", defs, body });
 };

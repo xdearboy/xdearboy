@@ -60,7 +60,7 @@ export const fetchProfile = async (login) => {
     .flatMap((w) => w.contributionDays)
     .map((d) => ({ date: d.date, count: d.contributionCount, level: LEVELS[d.contributionLevel] }));
   const weeks = cc.contributionCalendar.weeks.map((w) =>
-    w.contributionDays.map((d) => ({ count: d.contributionCount, level: LEVELS[d.contributionLevel] })),
+    w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, level: LEVELS[d.contributionLevel] })),
   );
 
   const pinned = u.pinnedItems.nodes.length ? u.pinnedItems.nodes : u.recent.nodes;

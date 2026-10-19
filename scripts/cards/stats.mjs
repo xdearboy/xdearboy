@@ -1,41 +1,69 @@
-import { c, delay, fmt, frame, langColor, panel } from "../theme.mjs";
+import { W, d, fmt, frame, label, mix, mocha, panel, sectionTitle, ui_ } from "../theme.mjs";
 
-const H = 252;
-
-const tile = (x, y, value, label, color, i) =>
-  `<g class="rise" ${delay(0.1 + i * 0.1)}><rect x="${x}" y="${y}" width="190" height="72" rx="10" fill="${c.mantle}" stroke="${c.surface0}"/><rect x="${x}" y="${y + 18}" width="3" height="36" rx="1.5" fill="${color}"/><text x="${x + 20}" y="${y + 38}" font-size="26" font-weight="700" style="fill:${color}">${fmt(value)}</text><text x="${x + 20}" y="${y + 58}" font-size="11" style="fill:${c.overlay}">${label}</text></g>`;
+const CELL = 10;
+const GAP = 3;
+const PITCH = CELL + GAP;
+const ramp = [0.12, 0.3, 0.5, 0.75, 1].map((t) => mix(ui_.panel, mocha.mauve, t));
+const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
 export const stats = (p) => {
-  const tiles = [
-    [p.commits, "commits / year", c.mauve],
-    [p.pulls, "pull requests", c.blue],
-    [p.stars, "stars earned", c.peach],
-    [p.repos, "public repos", c.green],
+  const items = [
+    [p.commits, "commits / year"],
+    [p.pulls, "pull requests"],
+    [p.stars, "stars earned"],
+    [p.repos, "public repos"],
   ];
-  const grid = tiles.map(([v, l, col], i) => tile(28 + (i % 2) * 206, 62 + Math.floor(i / 2) * 88, v, l, col, i)).join("");
+  const colW = (W - 72) / 4;
+  const numbers = items
+    .map(([v, l], i) => {
+      const x = 36 + i * colW;
+      return `${i ? `<line x1="${x - 16}" x2="${x - 16}" y1="82" y2="136" stroke="${ui_.border}"/>` : ""}<g class="up" ${d(0.1 + i * 0.08)}><text x="${x}" y="112" font-size="34" font-weight="700" style="fill:${mocha.mauve}">${fmt(v)}</text><text x="${x}" y="134" font-size="13" style="fill:${ui_.muted}">${l}</text></g>`;
+    })
+    .join("");
 
-  const barX = 468;
-  const barW = 344;
-  let off = 0;
-  let bar = "";
-  let legend = "";
-  p.languages.forEach((l, i) => {
-    const w = Math.max(3, l.share * barW);
-    bar += `<rect class="grow" ${delay(0.4 + i * 0.12)} x="${barX + off}" y="76" width="${Math.max(1, w - 3)}" height="12" rx="3" fill="${langColor(l.name)}"/>`;
-    off += w;
-    const ly = 122 + i * 17;
-    legend += `<g class="fade" ${delay(0.6 + i * 0.1)}><circle cx="${barX + 5}" cy="${ly - 4}" r="4" fill="${langColor(l.name)}"/><text x="${barX + 20}" y="${ly}" font-size="12">${l.name}</text><text x="${barX + barW}" y="${ly}" font-size="12" text-anchor="end" style="fill:${c.overlay}">${(l.share * 100).toFixed(1)}%</text></g>`;
-  });
+  const ly = 160;
+  const rowH = 28;
+  const barX = 160;
+  const barW = W - 36 - 36 - barX - 70 + 36;
+  const langs = p.languages
+    .map((l, i) => {
+      const y = ly + 54 + i * rowH;
+      const w = Math.max(6, l.share * barW);
+      return `<g class="up" ${d(0.3 + i * 0.08)}><text x="52" y="${y + 4}" font-size="13" font-weight="700">${l.name.toLowerCase()}</text><rect x="${barX}" y="${y - 6}" width="${barW}" height="10" rx="5" fill="${mix(ui_.bg, mocha.text, 0.08)}"/><rect class="grow" ${d(0.5 + i * 0.1)} x="${barX}" y="${y - 6}" width="${w.toFixed(1)}" height="10" rx="5" fill="url(#g)"/><text x="${W - 52}" y="${y + 4}" font-size="13" text-anchor="end" style="fill:${mocha.subtext}">${(l.share * 100).toFixed(1)}%</text></g>`;
+    })
+    .join("");
+  const langH = 54 + (p.languages.length - 1) * rowH + 24;
+  const langBox = `<rect x="36.5" y="${ly + 0.5}" width="${W - 73}" height="${langH}" rx="8" fill="${ui_.panel}" stroke="${ui_.border}"/>${label("top languages", 52, ly + 28)}${langs}`;
 
-  const title = (x, s) => `<text x="${x}" y="40" font-size="13" font-weight="700" style="fill:${c.overlay}"># ${s}</text>`;
-  const body =
-    panel(H) +
-    title(28, "stats") +
-    title(barX, "top languages") +
-    grid +
-    bar +
-    legend +
-    `<line x1="448" x2="448" y1="28" y2="${H - 28}" stroke="${c.surface0}"/>`;
+  const hy = ly + langH + 16;
+  const innerW = W - 73;
+  const hh = 7 * PITCH + 90;
+  const gx = 52 + 34;
+  const gy = hy + 52;
+  let lastMonth = -1;
+  let lastX = -99;
+  const months = p.weeks
+    .map((w, i) => {
+      const m = new Date(w[0].date).getUTCMonth();
+      if (m === lastMonth) return "";
+      lastMonth = m;
+      const x = gx + i * PITCH;
+      if (x - lastX < 36) return "";
+      lastX = x;
+      return `<text x="${x}" y="${hy + 40}" font-size="11" style="fill:${ui_.muted}">${MONTHS[m]}</text>`;
+    })
+    .join("");
+  const days = [["mon", 1], ["wed", 3], ["fri", 5]]
+    .map(([t, r]) => `<text x="52" y="${gy + r * PITCH + 9}" font-size="11" style="fill:${ui_.muted}">${t}</text>`)
+    .join("");
+  const cells = p.weeks
+    .map((w, i) => w.map((c, r) => `<rect class="fade" ${d(0.2 + i * 0.02)} x="${gx + i * PITCH}" y="${gy + r * PITCH}" width="${CELL}" height="${CELL}" rx="2" fill="${ramp[c.level]}"/>`).join(""))
+    .join("");
+  const fy = gy + 7 * PITCH + 18;
+  const legend = ramp.slice(1).map((f, i) => `<rect x="${W - 52 - 34 - 4 * 14 + i * 14}" y="${fy - 9}" width="${CELL}" height="${CELL}" rx="2" fill="${f}"/>`).join("");
+  const heat = `<rect x="36.5" y="${hy + 0.5}" width="${innerW}" height="${hh}" rx="8" fill="${ui_.panel}" stroke="${ui_.border}"/>${label("contributions", 52, hy + 24)}${months}${days}${cells}<text x="52" y="${fy}" font-size="12" style="fill:${ui_.muted}">${fmt(p.contributions)} github contributions in the last year</text><text x="${W - 52 - 34 - 4 * 14 - 8}" y="${fy}" font-size="12" text-anchor="end" style="fill:${ui_.muted}">less</text>${legend}<text x="${W - 52}" y="${fy}" font-size="12" text-anchor="end" style="fill:${ui_.muted}">more</text>`;
 
-  return frame({ height: H, label: "GitHub stats", body });
+  const H = hy + hh + 36;
+  const defs = `<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="${mix(mocha.mauve, mocha.base, 0.35)}"/><stop offset="1" stop-color="${mocha.mauve}"/></linearGradient>`;
+  return frame({ height: H, label: "github activity", defs, body: panel(W, H) + sectionTitle("github activity") + numbers + langBox + heat });
 };

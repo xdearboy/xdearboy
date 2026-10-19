@@ -1,0 +1,29 @@
+import { W, d, frame, mocha, panel, sectionTitle, ui_, wrap, esc } from "../theme.mjs";
+
+const paragraphs = [
+  "hey! i'm xdearboy, a devops / sre engineer. i run edge infrastructure, kubernetes clusters and anti-ddos tooling, and i like small fast tools written in rust, go and python.",
+  "i build neogate, a domain protection service, and tinker with networking in my free time. timezone: utc+3, tver, russia.",
+];
+const FS = 15;
+const LH = 24;
+const MAX = Math.floor((W - 72) / (FS * 0.6));
+
+export const about = () => {
+  let y = 92;
+  const body = paragraphs
+    .map((p, i) => {
+      const lines = wrap(p, MAX);
+      const out = lines
+        .map((l, k) => {
+          const html = esc(l).replace("xdearboy", `<tspan font-weight="700">xdearboy</tspan>`);
+          return `<text x="36" y="${y + k * LH}" font-size="${FS}" style="fill:${mocha.subtext}">${html}</text>`;
+        })
+        .join("");
+      const g = `<g class="up" ${d(0.15 + i * 0.15)}>${out}</g>`;
+      y += lines.length * LH + 12;
+      return g;
+    })
+    .join("");
+  const H = y + 12;
+  return frame({ height: H, label: "about me", body: panel(W, H) + sectionTitle("about me") + body });
+};
