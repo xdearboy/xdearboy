@@ -6,6 +6,8 @@
 
 <img src="assets/about.svg" width="100%" alt="About me">
 
+<img src="assets/experience.svg" width="100%" alt="Experience">
+
 <img src="assets/stack.svg" width="100%" alt="Tech stack">
 
 <a href="https://github.com/xdearboy/tachyon"><img src="assets/project-1.svg" width="49%" alt="tachyon"></a>&nbsp;<a href="https://github.com/ORG-FE/mfetch"><img src="assets/project-2.svg" width="49%" alt="mfetch"></a>

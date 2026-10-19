@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { fetchProfile } from "./github.mjs";
 import { hero } from "./cards/hero.mjs";
 import { about } from "./cards/about.mjs";
+import { experience } from "./cards/experience.mjs";
 import { stack } from "./cards/stack.mjs";
 import { project } from "./cards/project.mjs";
 import { stats } from "./cards/stats.mjs";
@@ -26,6 +27,7 @@ const buttons = [
 const files = {
   hero: hero(),
   about: about(),
+  experience: experience(),
   stack: stack(),
   stats: stats(profile),
   streak: streak(profile),
@@ -59,6 +61,8 @@ ${img("hero", "Hi, I'm xdearboy")}
 ${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join("&nbsp;&nbsp;")}
 
 ${img("about", "About me")}
+
+${img("experience", "Experience")}
 
 ${img("stack", "Tech stack")}
 

@@ -35,7 +35,7 @@ export const ui_ = {
 
 const fontFile = (weight) =>
   `@font-face{font-family:JB;font-weight:${weight};src:url(data:font/woff2;base64,${readFileSync(
-    new URL(`../fonts/jetbrains-mono-latin-${weight}-normal.woff2`, import.meta.url),
+    new URL(`../fonts/jb-${weight}.woff2`, import.meta.url),
   ).toString("base64")}) format("woff2")}`;
 
 const css = `

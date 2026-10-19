@@ -57,7 +57,7 @@ export const stats = (p) => {
     .map(([t, r]) => `<text x="52" y="${gy + r * PITCH + 9}" font-size="11" style="fill:${ui_.muted}">${t}</text>`)
     .join("");
   const cells = p.weeks
-    .map((w, i) => w.map((c, r) => `<rect class="fade" ${d(0.2 + i * 0.02)} x="${gx + i * PITCH}" y="${gy + r * PITCH}" width="${CELL}" height="${CELL}" rx="2" fill="${ramp[c.level]}"/>`).join(""))
+    .map((w, i) => `<g class="fade" ${d(0.2 + i * 0.02)}>${w.map((c, r) => `<rect x="${gx + i * PITCH}" y="${gy + r * PITCH}" width="${CELL}" height="${CELL}" rx="2" fill="${ramp[c.level]}"/>`).join("")}</g>`)
     .join("");
   const fy = gy + 7 * PITCH + 18;
   const legend = ramp.slice(1).map((f, i) => `<rect x="${W - 52 - 34 - 4 * 14 + i * 14}" y="${fy - 9}" width="${CELL}" height="${CELL}" rx="2" fill="${f}"/>`).join("");
