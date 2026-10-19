@@ -18,7 +18,7 @@ export const button = ({ text, iconName, primary }) => {
     height: h,
     label: text,
     weights: [700],
-    body: `${icon(iconName, 1, 5, 16, ink)}<text x="25" y="17.5" font-size="${size}" font-weight="700" style="fill:${ink}">${esc(text)}</text>`,
+    body: `${icon(iconName, 0, 5, 16, ink)}<text x="24" y="17.5" font-size="${size}" font-weight="700" style="fill:${ink}">${esc(text)}</text>`,
   });
 };
 

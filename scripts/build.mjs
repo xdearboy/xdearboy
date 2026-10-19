@@ -33,7 +33,7 @@ const files = {
   footer: footer(new Date().toISOString().slice(0, 16).replace("T", " ") + " utc"),
   work: work(),
   ...Object.fromEntries(buttons.map((b) => [`button-${b.id}`, button(b)])),
-};
+};;
 
 for (const [name, svg] of Object.entries(files)) {
   writeFileSync(new URL(`${name}.svg`, out), svg);
@@ -47,7 +47,7 @@ const readme = `<div align="center">
 
 ${img("hero", "Hi, I'm xdearboy")}
 
-${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join("&nbsp;&nbsp;")}
+${img("links-pad", "", "auto")}${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join(img("links-gap", "", "auto"))}${img("links-fill", "", "auto")}
 
 ${img("about", "About me")}
 

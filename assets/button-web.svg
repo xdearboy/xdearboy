@@ -11,4 +11,4 @@ text{font-family:JB,"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monos
 @keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
 @keyframes blink{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
-</style><defs></defs><g transform="translate(1 5) scale(0.6666666666666666)" fill="none" stroke="#cba6f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /></g><text x="25" y="17.5" font-size="14" font-weight="700" style="fill:#cba6f7">d3vo.ru</text></svg>
+</style><defs></defs><g transform="translate(0 5) scale(0.6666666666666666)" fill="none" stroke="#cba6f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /></g><text x="24" y="17.5" font-size="14" font-weight="700" style="fill:#cba6f7">d3vo.ru</text></svg>
