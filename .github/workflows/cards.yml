@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: portfolio-runners
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
