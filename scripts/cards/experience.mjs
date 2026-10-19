@@ -3,7 +3,7 @@ import { W, d, esc, frame, mocha, panel, sectionTitle, ui_ } from "../theme.mjs"
 const jobs = [
   { period: "aug 2026 — now", company: "neogate", role: "founder & ceo, developer", now: true },
   { period: "nov 2025 — jul 2026", company: "intezio.net", role: "developer & tech support" },
-  { period: "sep 2025 — jul 2026", company: "mitelis.net", role: "beta tester, ddos protection" },
+  { period: "sep 2025 — jul 2026", company: "mitelis.net", role: "beta tester" },
   { period: "jul 2025 — now", company: "*** holding", role: "devops engineer", now: true },
   { period: "2023 — 2025", company: "msc group", role: "developer" },
 ];
