@@ -1,4 +1,5 @@
 import { mkdirSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { fetchProfile } from "./github.mjs";
 import { hero } from "./cards/hero.mjs";
 import { about } from "./cards/about.mjs";
@@ -40,7 +41,8 @@ for (const [name, svg] of Object.entries(files)) {
   console.log(`${name}.svg ${(svg.length / 1024).toFixed(1)} KB`);
 }
 
-const img = (name, alt, width = "100%") => `<img src="assets/${name}.svg" width="${width}" alt="${alt}">`;
+const v = (name) => createHash("sha1").update(files[name] ?? "").digest("hex").slice(0, 8);
+const img = (name, alt, width = "100%") => `<img src="assets/${name}.svg?v=${v(name)}" width="${width}" alt="${alt}">`;
 const link = (href, inner) => `<a href="${href}">${inner}</a>`;
 
 const readme = `<div align="center">
