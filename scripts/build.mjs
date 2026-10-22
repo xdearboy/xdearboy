@@ -49,7 +49,11 @@ ${img("hero", "Hi, I'm xdearboy")}
 
 <br /><br />
 
-${img("links-pad", "", "auto")}${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join(img("links-gap", "", "auto"))}${img("links-fill", "", "auto")}
+<div align="center">
+
+${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join(" ")}
+
+</div>
 
 ${img("about", "About me")}
 

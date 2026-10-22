@@ -4,7 +4,11 @@
 
 <br /><br />
 
-<img src="assets/links-pad.svg" width="auto" alt=""><a href="https://d3vo.ru"><img src="assets/button-web.svg" width="auto" alt="d3vo.ru"></a><img src="assets/links-gap.svg" width="auto" alt=""><a href="https://t.me/contactfiuimwix_bot"><img src="assets/button-tg.svg" width="auto" alt="telegram"></a><img src="assets/links-gap.svg" width="auto" alt=""><a href="https://wakatime.com/@xdearboy"><img src="assets/button-waka.svg" width="auto" alt="wakatime"></a><img src="assets/links-gap.svg" width="auto" alt=""><a href="https://www.codewars.com/users/xdearboy"><img src="assets/button-cw.svg" width="auto" alt="codewars"></a><img src="assets/links-fill.svg" width="auto" alt="">
+<div align="center">
+
+<a href="https://d3vo.ru"><img src="assets/button-web.svg" width="auto" alt="d3vo.ru"></a> <a href="https://t.me/contactfiuimwix_bot"><img src="assets/button-tg.svg" width="auto" alt="telegram"></a> <a href="https://wakatime.com/@xdearboy"><img src="assets/button-waka.svg" width="auto" alt="wakatime"></a> <a href="https://www.codewars.com/users/xdearboy"><img src="assets/button-cw.svg" width="auto" alt="codewars"></a>
+
+</div>
 
 <img src="assets/about.svg" width="100%" alt="About me">
 
