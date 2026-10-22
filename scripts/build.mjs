@@ -47,6 +47,8 @@ const readme = `<div align="center">
 
 ${img("hero", "Hi, I'm xdearboy")}
 
+<br /><br />
+
 ${img("links-pad", "", "auto")}${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join(img("links-gap", "", "auto"))}${img("links-fill", "", "auto")}
 
 ${img("about", "About me")}
