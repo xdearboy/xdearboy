@@ -8,17 +8,21 @@ export const divider = () =>
     body: `<clipPath id="c"><rect width="${W}" height="12"/></clipPath><line x1="0" x2="${W}" y1="6" y2="6" stroke="${ui_.border}"/><g clip-path="url(#c)"><rect y="5" width="140" height="2" rx="1" fill="${mocha.mauve}"><animate attributeName="x" values="-140;${W}" dur="5s" repeatCount="indefinite"/></rect></g>`,
   });
 
-export const button = ({ text, iconName, primary }) => {
-  const size = 14;
-  const w = Math.round(textWidth(text, size) + 38);
-  const h = 26;
-  const ink = primary ? mocha.mauve : mocha.subtext;
+const CELL = W / 4;
+const GAP = 16;
+const INNER = (W - 3 * GAP) / 4;
+
+export const button = ({ text, iconName, primary }, k) => {
+  const h = 52;
+  const x = k * (INNER + GAP) - k * CELL;
+  const ink = primary ? mocha.mauve : mocha.text;
+  const cy = h / 2;
   return frame({
-    width: w,
+    width: CELL,
     height: h,
     label: text,
     weights: [700],
-    body: `${icon(iconName, 0, 5, 16, ink)}<text x="24" y="17.5" font-size="${size}" font-weight="700" style="fill:${ink}">${esc(text)}</text>`,
+    body: `<rect x="${x + 0.5}" y=".5" width="${INNER - 1}" height="${h - 1}" rx="10" fill="${ui_.bg}" stroke="${ui_.border}"/>${icon(iconName, x + 18, cy - 8, 16, ink)}<text x="${x + 44}" y="${cy + 5}" font-size="14" font-weight="700" style="fill:${ink}">${esc(text)}</text><text x="${x + INNER - 18}" y="${cy + 5}" font-size="14" text-anchor="end" style="fill:${ui_.muted}">→</text>`,
   });
 };
 

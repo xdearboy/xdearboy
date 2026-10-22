@@ -32,7 +32,7 @@ const files = {
   divider: divider(),
   footer: footer(new Date().toISOString().slice(0, 16).replace("T", " ") + " utc"),
   work: work(),
-  ...Object.fromEntries(buttons.map((b) => [`button-${b.id}`, button(b)])),
+  ...Object.fromEntries(buttons.map((b, i) => [`button-${b.id}`, button(b, i)])),
 };;
 
 for (const [name, svg] of Object.entries(files)) {
@@ -45,31 +45,25 @@ const link = (href, inner) => `<a href="${href}">${inner}</a>`;
 
 const readme = `<div align="center">
 
-${img("hero", "Hi, I'm xdearboy")}
+<p>${img("hero", "Hi, I'm xdearboy")}</p>
 
-<br /><br />
+<p>${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "25%"))).join("")}</p>
 
-<div align="center">
+<p>${img("about", "About me")}</p>
 
-${buttons.map((b) => link(b.href, img(`button-${b.id}`, b.text, "auto"))).join(" ")}
+<p>${img("experience", "Experience")}</p>
 
-</div>
+<p>${img("stack", "Tech stack")}</p>
 
-${img("about", "About me")}
+<p>${link("https://github.com/xdearboy?tab=repositories", img("work", "Open source — view all repositories"))}</p>
 
-${img("experience", "Experience")}
+<p>${img("stats", "GitHub activity")}</p>
 
-${img("stack", "Tech stack")}
+<p>${img("streak", "Streak")}</p>
 
-${link("https://github.com/xdearboy?tab=repositories", img("work", "Open source — view all repositories"))}
+<p>${img("divider", "")}</p>
 
-${img("stats", "GitHub activity")}
-
-${img("streak", "Streak")}
-
-${img("divider", "")}
-
-${img("footer", "updated")}
+<p>${img("footer", "updated")}</p>
 
 </div>
 `;
