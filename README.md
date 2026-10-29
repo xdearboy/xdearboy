@@ -12,12 +12,12 @@
 
 <p><a href="https://github.com/xdearboy?tab=repositories"><img src="assets/work.svg?v=f504e970" width="100%" alt="Open source — view all repositories"></a></p>
 
-<p><img src="assets/stats.svg?v=9880d1ef" width="100%" alt="GitHub activity"></p>
+<p><img src="assets/stats.svg?v=80806fba" width="100%" alt="GitHub activity"></p>
 
-<p><img src="assets/streak.svg?v=371e6112" width="100%" alt="Streak"></p>
+<p><img src="assets/streak.svg?v=f840b379" width="100%" alt="Streak"></p>
 
 <p><img src="assets/divider.svg?v=4a53b4f8" width="100%" alt=""></p>
 
-<p><img src="assets/footer.svg?v=03f29558" width="100%" alt="updated"></p>
+<p><img src="assets/footer.svg?v=bf82a6d2" width="100%" alt="updated"></p>
 
 </div>
