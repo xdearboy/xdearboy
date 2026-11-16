@@ -18,6 +18,6 @@
 
 <p><img src="assets/divider.svg?v=4a53b4f8" width="100%" alt=""></p>
 
-<p><img src="assets/footer.svg?v=e4e88aab" width="100%" alt="updated"></p>
+<p><img src="assets/footer.svg?v=12cef7d6" width="100%" alt="updated"></p>
 
 </div>
